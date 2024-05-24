@@ -1,0 +1,41 @@
+<title>airplane</title>
+<meta charset="utf-8">
+
+
+<a href="https://youtu.be/GY-4ZeZmh8o"><img src="images.png" id="airplane" class="airplane"></a>
+<br><br><br><br><br><br><br><br>
+<div style=" color:red;">no click airplane</div>
+<style>
+    .airplane {
+        position: relative;
+        animation: moveUpDown 2s linear infinite;
+        transform-origin: center;
+    }
+
+    @keyframes moveUpDown {
+        0% {
+            transform-origin: center center;
+            transform: translateY(0) rotate(0deg);
+        }
+
+        25% {
+            transform-origin: center center;
+            transform: translateY(100px) rotate(20deg);
+        }
+
+        50% {
+            transform-origin: center center;
+            transform: rotate(-20deg);
+        }
+
+        75% {
+            transform-origin: center center;
+            transform: translateY(0px)
+        }
+
+        100% {
+            transform-origin: center center;
+            transform: translateY(0) rotate(0);
+        }
+    }
+</style>

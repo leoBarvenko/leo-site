@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+    
+}
+
+.text {
+    color: green;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+    0% {
+        transform: translatey(200vh);
+    }
+
+    100% {
+        transform: translatey(115vh);
+    }
+}
