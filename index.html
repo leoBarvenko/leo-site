@@ -1,70 +1,32 @@
-<!doctype html>
-<html translate="no">
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Barvenko</title>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤘</text></svg>">
-</head>
-<body style="margin: 0">
-    <iframe style='height: 100vh; width: 100vw;'
-        src="https://www.youtube.com/embed/9UMxZofMNbA"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-    </iframe>
-    <style>
-        .bar {
-            position: absolute;
-            bottom: 15%;
-            text-align: center;
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            gap: .7rem;
-        }
+	<link rel="stylesheet" href="index.css">
+	<title>Leo programming lessons</title>
+	<style type="text/css">
 
-        button {
-            color: white;
-            background: #542321d4;
-            padding: .5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            border: none;
-        }
-    </style>
+	</style>
 
-    <div class='bar'>
-        <div>
-            <audio id='budhabeach' src='https://radio4.vip-radios.fm:18054/stream-128kmp3-BuddhaBeach'
-                type="audio/mpeg"></audio>
-            <button class='budhabeach' onclick='startstop("budhabeach")'>Buddha Longe</button>
-        </div>
-        <div>
-            <audio id='montecarlo' src='https://radio2.vip-radios.fm:18074/stream-mp3-CoolMusic'
-                type="audio/mpeg"></audio>
-            <button class='montecarlo' onclick='startstop("montecarlo")'>Monte Carlo</button>
-        </div>
-        <div>
-            <audio id='clubhouse' src='https://strm112.1.fm/deephouse_mobile_mp3' type="audio/mpeg"></audio>
-            <button class='clubhouse' onclick='startstop("clubhouse")'>Club House</button>
-        </div>
-    </div>
+<body>
+	<div>
+		<h1 id="titl">Leo programming lessons</h1>
+		</br>
+	</div>
+	<div>
+		<a id="timer2" href="./timer/timer.html">timer</a>
+		<a id="calculator2" href="./calculator/calculator.html">calculator</a>
+		<a class="items" href="./calculator/calculator.html">
+			<img id="calculator" src="./calculator.png" alt="">
+		</a>
+		<a class="items" href="./timer/timer.html">
+			<img id="timer" src="https://cdn.iconscout.com/icon/free/png-256/free-digital-timer-1921872-1624654.png?f=webp" alt="">
+		</a>
+		<a href="./23bb/index.html">
+			<img src="./23.jpg" alt="">
+		</a>
+	</div>
 </body>
-<script>
-    function startstop(id) {
-        let audio = document.getElementById(id);
-        if (audio.paused) {
-            audio.play();
-            document.getElementsByClassName(id)[0].style.background = '#bf150ed4';
-        } else {
-            audio.pause();
-            document.getElementsByClassName(id)[0].style.background = '#542321d4';
-        }
-    }
-</script>
+
 </html>
