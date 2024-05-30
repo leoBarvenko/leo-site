@@ -1,6 +1,6 @@
 let clicks = 0;
 let totalClicks = 0;
-let coins = 0; 
+let coins = Infinity; 
 let power = 1; 
 let price = 1;
 let selling = 2;
@@ -42,7 +42,7 @@ function shopClose() {
          }
 }
 function upgrade() {
-if (coins == price) {
+if (coins == price || coins > price) {
     coins -= price;
     selling *= 2;
     price *= 2;
@@ -58,6 +58,6 @@ function change() {
         coins++;
         displayUpdate();
     } else {
-        alert('you not enogh clicks')
+        alert('you not enogh clicks');
     }
 }
