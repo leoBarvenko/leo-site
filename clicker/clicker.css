@@ -1,0 +1,55 @@
+#masterButton {
+    position: fixed;
+    right: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50000px;
+    background-color: rgb(255, 153, 0);
+}
+#masterButton:hover {
+    transition: 60s;
+background-color: black;
+color: aliceblue;
+}
+#shop {
+    position: fixed;
+    left: 1%;
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    border-radius: 5px;
+}
+#coins {
+    position: fixed;
+    right: 43%;
+    top: 8%;
+    color: goldenrod;
+}
+#clicks {
+    position: fixed;
+    right: 63%;
+    top: 8%;  
+    color: blue;  
+}
+#out {
+    background-color: red;
+    border-radius: 10px;
+}
+#upgrade {
+    position: fixed;
+    right: 50%;
+    top: 3%;
+    background-color: chartreuse;
+    border-radius: 10px;
+}
+#upgrade:active {
+    transition: 20s;
+    background-color: rgb(202, 254, 150);
+}
+#change {
+    position: fixed;
+    right: 48%;
+    top: 10%;
+    background-color: aquamarine;
+    border-radius: 10px;
+}
