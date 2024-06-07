@@ -1,5 +1,6 @@
 let data;
 let file;
+let sumbit = document.getElementById("sumbit");
 let notreg = document.getElementsByClassName("notreg");
 let reg = document.getElementsByClassName("reg");
 for(let i = 0; i < reg.length - 1; i++) {
@@ -27,6 +28,12 @@ function regi() {
     function savelocalstorage() {
         password = document.getElementById("password").value;
         nickname = document.getElementById("nickname").value;
+        if (password == "" || nickname == "") {
+                sumbit.disabled = true;
+        }
+        if (password != "" || nickname != "") {
+            sumbit.disabled = false;
+    }  
         data = [password, nickname];
         file = JSON.stringify(data);
         localStorage.setItem("userdata", file);

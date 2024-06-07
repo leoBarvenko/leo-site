@@ -1,6 +1,6 @@
 let clicks = 0;
 let totalClicks = 0;
-let coins = Infinity; 
+let coins = 0; 
 let power = 1; 
 let price = 1;
 let selling = 2;
