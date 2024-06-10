@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="icon" href="icon.png" type="image/x-icon" />
+</head>
+
+<body>
+    <h1 id="title">calculator</h1>
+    <div id="grey">
+        <input onchange="calculate()" id="bistro" placeholder="your equation">
+        <span id="r"></span>
+    </div>
+    <script>
+        function calculate() {
+            let expression = document.getElementById('bistro').value;
+            try {
+                let result = eval(expression);
+                document.getElementById("r").innerHTML = `= ${result}`;
+            } catch (error) {
+                document.getElementById("r").innerHTML = '= Error';
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+body {
+    background-color: #111;
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+#titl {
+    color: azure;
+}
+.items {
+    margin-top: 1rem;
+}
+#calculator {
+    width: 10rem;
+    margin-right: 2rem;
+}
+#calculator2 {
+    position: relative;
+    top: -16rem;
+    left: 9rem;
+}
+#timer2 {
+    position: relative;
+    top: -13rem;
+    left: 31rem;
+}

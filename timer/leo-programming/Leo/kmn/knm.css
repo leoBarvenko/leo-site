@@ -1,0 +1,44 @@
+body{
+    text-align: center;
+}
+.rps {
+    margin-bottom: 1rem;
+}
+#rock {
+    margin-right: 1rem;
+    background-color: gray;
+    border-radius: 4px;
+    border: solid 1px black;
+    width: 4rem;
+    height: 4rem;
+}
+#scissors {
+    margin-right: 1rem;
+    background-color: #aaaaaa;
+    border-radius: 4px;
+    border: solid 1px black;
+}
+#paper {
+    margin-right: 1rem;
+    background-color: aliceblue;
+    border-radius: 4px;
+    border: solid 1px black;
+}
+.w {
+    margin-top: 1rem;
+    color: chartreuse;
+}
+.l {
+    margin-top: 1rem;
+    color: red; 
+}
+.d {
+    margin-top: 1rem;
+    color: gray;
+}
+.none {
+    display: none;
+}
+.r {
+    display: block;
+}

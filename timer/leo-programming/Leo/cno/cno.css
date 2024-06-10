@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(255, 247, 247);
+    text-align: center;
+}
+.green {
+    color: green;
+}
+.red {
+    color: red;
+}
+#num {
+    margin-right: 1rem;
+}
+#win {
+    margin-right: 1rem;
+    color: green;
+}
+#gtnft {
+    margin-bottom: 1rem;
+}
+#lose {
+    color: red;
+}

@@ -1,0 +1,15 @@
+#sashar {
+    color: white;
+    background-color: black;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+#sashar:hover {
+    transition: 5s;
+    background-color: blue;
+    color: black;
+}

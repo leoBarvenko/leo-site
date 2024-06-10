@@ -1,0 +1,63 @@
+#circle {
+    border: solid black 1px;
+    border-radius: 50%;
+    background-color: blue;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    
+
+}
+
+.center {
+    position: center center;
+}
+#border {
+    height: 920px;
+    width: 1020px;
+    border: solid black 3px;
+    border-radius: 10px;
+    background-color: yellow;
+}
+
+#board {
+    width: 200px;
+    height: 10px;
+    background-color: red;
+position: absolute;
+top: 850px;
+border: solid gray 1px;
+border-radius: 10px;
+}
+ #score {
+    position: fixed;
+right: 5%;
+bottom: 98%;
+height: 20px;  
+color: aliceblue;  
+font-size: 40px;
+} 
+body {
+    background-color: black;
+}
+#mobscore {
+    position: fixed;
+right: 40%;
+bottom: 20%;
+height: 20px;  
+color: aliceblue;  
+font-size: 40px;
+} 
+
+button {
+    position: fixed;
+    width: 25rem;
+    height: 25rem;
+    display: flex;
+    background-color: orange;
+    border-radius: 50%;
+    font-size:10rem;
+}
+#right {
+right: 0%;
+}

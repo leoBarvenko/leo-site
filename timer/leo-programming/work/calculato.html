@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+<input id="one" style="margin-right: 1rem;" type="number">
+<span id="x"></span>
+<input id="two" style="margin-left: 1rem;" type="number">
+<span id="res"> = </span>
+<br>
+<button onclick="calculate('-')">-</button>
+<button 
+    style="margin-left: 1rem;margin-right: 1rem;" 
+    onclick="calculate('+')">
+    +
+</button>
+<button style="margin-right: 1rem;" onclick="calculate('/')">/</button>
+<button onclick="calculate('*')">*</button>
+<script>
+    //let sign = 0
+    function calculate(sign) {
+        //sign = 0
+        console.log(sign)
+        let one = Number(document.querySelector('#one').value);
+        let two = Number(document.querySelector('#two').value);
+        if(sign == '-') {
+            let result = one - two;
+            document.getElementById('x').innerHTML = `-`;
+            document.getElementById("res").innerHTML = ` = ${result}`;
+
+        } else if(sign == '+') {
+            let result = one + two;
+            document.getElementById('x').innerHTML = `+`;
+            document.getElementById("res").innerHTML = ` = ${result}`;
+
+        } else if(sign == '/') {
+            let result = one / two;
+            document.getElementById('x').innerHTML = `/`;
+            document.getElementById("res").innerHTML = ` = ${result}`;
+        } else if(sign == '*') {
+            let result = one * two;
+            document.getElementById('x').innerHTML = `*`;
+            document.getElementById("res").innerHTML = ` = ${result}`;
+        }
+    }
+</script>
+</body>

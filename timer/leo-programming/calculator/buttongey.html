@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<title>button</title>
+<div id="ahmed"></div>
+<style>
+    #myButton {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+</style>
+
+    <button id="myButton" onclick="bravo()">nazMi</button>
+
+    <script>
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function moveButton() {
+            let windowWidth = window.innerWidth;
+            let windowHeight = window.innerHeight;
+            let newX = getRandomNumber(0, windowWidth);
+            let newY = getRandomNumber(0, windowHeight);
+
+            document.getElementById("myButton").style.left = newX + "px";
+            document.getElementById("myButton").style.top = newY + "px";
+        }
+
+        setInterval(moveButton, 2000);
+
+        function bravo()  {
+            document.querySelector('#ahmed').innerHTML = "MOLODEC";
+        }
+    </script>
+</html>

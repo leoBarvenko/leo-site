@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<link rel="icon"
+  href="https://cdn1.vectorstock.com/i/1000x1000/31/85/stopwatch-glyph-icon-measure-and-countdown-timer-vector-25053185.jpg"
+  type="image/x-icon">
+<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="timer.css">
+
+<body>
+  <div id="timer">
+    <div id="time2">
+      <span id="min" class="time" style="font-family: 'Orbitron', sans-serif;">0</span>
+      <span class="time" style="font-family: 'Orbitron', sans-serif;">:</span>
+      <!-- <span class="10sdel">0</span> -->
+      <span id="seconds" class="time" style="font-family: 'Orbitron', sans-serif;">0</span>
+      <br>
+    </div>
+    <div id="button">
+    <button class="buttons" id="start" onclick="start()" style="font-family: 'Orbitron', sans-serif;">start</button>
+    <button class="buttons" id="pause" onclick="stop()" style="font-family: 'Orbitron', sans-serif;">pause</button>
+    <button class="buttons" id="reset" onclick="reset()" style="font-family: 'Orbitron', sans-serif;">reset</button>
+  </div>
+  </div>
+  <script src="timer.js"></script>
+</body>

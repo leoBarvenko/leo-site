@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<span id="cube1" class="center"></span>
+<span id="cube2" class="center"></span>
+<span id="cube3" class="center"></span><br><br>
+<button id="center" onclick="start()">new numbers</button>
+<style>
+    #center {
+        position: absolute;
+        left: 40%;
+
+        margin-top: 3rem;
+        margin-left: 2rem;
+    }
+
+    #cube1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        margin: 1rem;
+        left: 245px;
+        border: 1px solid black;
+        border-radius: 10px;
+
+    }
+
+    #cube2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        margin: 1rem;
+        left: 325px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    #cube3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        margin: 1rem;
+        left: 405px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+</style>
+
+
+<script>
+    function start() {
+        let c1 = Math.floor(Math.random() * 6);
+        let c2 = Math.floor(Math.random() * 6);
+        let c3 = Math.floor(Math.random() * 6);
+        document.getElementById("cube1").innerHTML = c1;
+        document.getElementById("cube2").innerHTML = c2;
+        document.getElementById("cube3").innerHTML = c3;
+    }
+
+</script>

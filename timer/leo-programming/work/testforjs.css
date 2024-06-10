@@ -1,0 +1,15 @@
+#uop {
+    color: aqua;
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+    width: 250px;
+    height: 200px;
+}

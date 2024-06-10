@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <style>
+        .circle {
+            border-radius: 100%;
+            position: absolute;
+            text-align: center;
+        }
+    </style>
+    <div id="container"></div>
+    <script>
+        setInterval(() => { 
+            let con = document.getElementById('container');
+            let height = 0;
+            let y = 0;
+            let x = 0;
+            let cir = document.createElement('div');
+            cir.innerHTML = '8D'
+            height = Math.floor(Math.random() * 80) + 50;
+            y = Math.floor(Math.random() * 1100);
+            x = Math.floor(Math.random() * 2200);
+            let color1 = Math.floor(Math.random() * 255);
+            let color2 = Math.floor(Math.random() * 255);
+            let color3 = Math.floor(Math.random() * 255);
+            cir.className = 'circle';
+            cir.style.height = `${height}px`;
+            cir.style.width = `${height}px`;
+            cir.style.left = `${x}px`;
+            cir.style.top = `${y}px`;
+            cir.style.background = `rgb(${color1},${color2},${color3})`;
+            document.body.style.background = `black`;
+            con.appendChild(cir);
+            height = 0;
+        }, 100);
+    </script>
+</body>
+</html>

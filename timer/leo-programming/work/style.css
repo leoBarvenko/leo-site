@@ -1,0 +1,39 @@
+
+
+.asd {
+    height: 200px;
+    width: 200px;
+    color: aliceblue;
+    background-color: chartreuse;
+   border-radius: 50px;
+    cursor: pointer;
+}
+
+.redhod {
+    color: red;
+}
+.kotik {
+    height: 200px;
+    width: 250px;
+}
+.obg {
+    border: solid 1px black;
+    
+}
+th,td {
+    border: 1px solid black;
+    padding: 1px;
+}
+#non {
+    color: rgb(255, 0, 212);
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+    border-radius: 50px;
+    cursor: pointer;
+}
+#non:hover {
+    transition:15s;
+   background-color: aqua;
+   color: greenyellow;
+}

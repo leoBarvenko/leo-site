@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Динамический список покупок</title>
+</head>
+
+<body>
+    <h1>Список покупок</h1>
+
+    <ul id="shoppingList">
+    </ul>
+
+    <form id="addForm">
+        <label for="newItem">Добавить покупку:</label>
+        <input type="text" id="newItem" name="newItem" required>
+        <button type="button" onclick="addItem()">Добавить</button>
+    </form>
+
+    <script>
+        function addItem() {
+            var newItemInput = document.getElementById("newItem");
+            var newItemValue = newItemInput.value.trim();
+
+            if (newItemValue !== "") {
+                var shoppingList = document.getElementById("shoppingList");
+                var newItem = document.createElement("li");
+                newItem.textContent = newItemValue;
+                shoppingList.appendChild(newItem);
+                newItemInput.value = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

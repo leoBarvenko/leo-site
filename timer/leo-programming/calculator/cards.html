@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+</head>
+
+<body>
+    <span id="cards"></span>
+    <style>
+        .card {
+            display: inline-block;
+            background-color: #9facd1;
+            height: 144px;
+            width: 90px;
+            border: 1px solid black;
+            margin: 2px;
+            margin-right: -1rem;
+            box-shadow: -4px 0px 8px 0px black;
+            text-align: center;
+            line-height: 144px;
+            font-size: 24px;
+        }
+        .red {
+           color: red;
+        }
+
+        .black {
+            color: black;
+        }
+
+    </style>
+    <script>
+        let pik = ['♤', '♥', '♧', '♢'];
+        let tuz = ['6', '7', '8', '9', '10', 'W', 'Q', 'k', 'A'];
+        let con = document.getElementById('cards');
+        for (let m = 0; m <= 3; m++) {
+            for (let c = 0; c <= 8; c++) {
+
+                let card = document.createElement('span');
+                card.className = 'card';
+                card.innerHTML = pik[m] + tuz[c];
+                if (pik[m] === '♥' || pik[m] === '♢') {
+                    card.classList.add('red');
+                } else {
+                    card.classList.add('black');
+                }
+                con.appendChild(card);
+
+            }
+            let br = document.createElement('br');
+            con.appendChild(br);
+        }
+
+    </script>
+</body>

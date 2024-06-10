@@ -4,14 +4,19 @@
     <title>clicker</title>
 </head>
 <body>
-    <button onclick="regi()" class="notreg">registration</button>
-    <a href="clicker.html"><button class="notreg">guest</button></a>
-    <button onclick="back()" class="reg">back</button>
-    <input type="password" id="password" placeholder="Enter your password" class="reg">
-    <input type="text" id="nickname" placeholder="Enter your nickname" class="reg">    
+    <button onclick="regi()" class="notreg" class="nogtlog">registration</button>
+    <button onclick="login()" class="notreg" class="nogtlog">login</button><br>
+    <a href="clicker.html"><button class="notreg" class="nogtlog">guest</button></a>
+    <button onclick="back()" class="reg" class="nogtlog">back</button>
+    <input type="password" id="password" placeholder="Enter your password" class="reg" class="nogtlog">
+    <input type="text" id="nickname" placeholder="Enter your nickname" class="reg" class="nogtlog">    
     <a href="clicker.html"><button id="sumbit" onclick="savelocalstorage()"
-class="reg">
+        class="reg" class="nogtlog">
           submit</button></a>
+    <button class="log" onclick="back()">back</button><br>
+    <input type="text" placeholder="nickname" id="nicklog" class="log" maxlength="16"><br>
+    <input type="password" placeholder="password" id="passlog" class="log"><br>
+    <button  class="log" onclick="check()" class="log">sumbit</button>
     <script src="registrate.js"></script>
 </body>
 </html>

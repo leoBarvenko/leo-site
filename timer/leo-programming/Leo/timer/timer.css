@@ -1,0 +1,48 @@
+/* #min {
+  margin-left: 4rem;
+} */
+
+#start {
+  background-color: chartreuse;
+}
+
+#pause {
+  background-color: yellow;
+}
+
+#reset {
+  background-color: red;
+}
+
+.buttons {
+  border-radius: 15px;
+  border-color: white;
+  height: 2rem;
+}
+
+#time2 {
+  width: 100%;
+}
+
+/* .del {
+    display: block;
+} */
+.time {
+  color: aqua;
+  font-size: 5rem;
+  position: unset;
+}
+
+#timer {
+  position: absolute;
+  left: 40%;
+  top: 35%;
+  text-align: center;
+  width: 18rem;
+}
+
+body {
+  /* width: 300px;
+    height: 300px; */
+  background-color: #000;
+}

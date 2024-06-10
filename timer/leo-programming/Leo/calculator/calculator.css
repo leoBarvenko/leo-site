@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+    position: relative;
+}
+#grey {
+    background-color: grey;
+    border-radius: 15px;
+    margin-top: 3rem;
+    width: 20rem;
+    height: 5rem;
+    margin: auto;
+}
+#title {
+    color: orange;
+    text-align: center;
+}
+input {
+    margin: 1.5rem 0 0 1.5rem
+}

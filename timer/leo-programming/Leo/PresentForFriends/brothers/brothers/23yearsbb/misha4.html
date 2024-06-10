@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<div class="know" id="phot">hepy birday!!!</div>
+<button onclick="start()" id="but" class="know">я прочитал</button>
+<div id="con"></div>
+<style>
+    .know {
+        color: violet;
+        text-align: center;
+    }
+
+    #but {
+        background-color: rgba(42, 248, 42, 0.852);
+        position: absolute;
+        left: 40%;
+        border-radius: 50px;
+        transition: 3s;
+        color: black;
+    }
+
+    #but:hover {
+        cursor: pointer;
+        background-color: red;
+        border-radius: 2px;
+
+    }
+</style>
+
+
+
+<script>
+    document.body.style.background = `black`;
+    function start() {
+
+        let block = document.getElementById("but");
+        block.style.display = "none";
+        let block2 = document.getElementById("phot");
+        block2.style.display = "none";
+        setInterval(() => {
+            let con = document.getElementById('con');
+            let height = 0;
+            let y = 0;
+            let x = 0;
+            let color1 = Math.floor(Math.random() * 255);
+            let color2 = Math.floor(Math.random() * 255);
+            let color3 = Math.floor(Math.random() * 255);
+            let cir = document.createElement('div');
+            cir.innerHTML = 'ΚΑΛΟ ΓΕΝΕΘΛΙΑ ΜΙΧΑΛΗΣ!'
+            y = Math.floor(Math.random() * window.innerHeight);
+            x = Math.floor(Math.random() * window.innerWidth);
+            cir.style.position = "absolute";
+            cir.style.left = `${x}px`;
+            cir.style.top = `${y}px`;
+            cir.className = 'circle';
+            cir.style.color = `rgb(${color1}, ${color2}, ${color3})`;
+            con.appendChild(cir);
+        }, 100);
+    }
+</script>

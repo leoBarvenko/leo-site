@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        .cub {
+            background-color: red;
+            height: 50px;
+            width: 50px;
+           background-position: center, center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="rota" class="cub">1</div>
+    <div id="scal" class="cub">2</div>
+    <div id="tran" class="cub">3</div>
+    <div id="skew" class="cub">4</div><br>
+    <button onclick="rota()">1</button>
+    <button onclick="scal()">2</button>
+    <button onclick="tran()">3</button>
+    <button onclick="skew()">4</button>
+    <script>
+        let el1 = document.getElementById('rota');
+        let el2 = document.getElementById('scal');
+        let el3 = document.getElementById('tran');
+        let el4 = document.getElementById('skew');
+        el1.style.margin = `1rem`;
+        el2.style.margin = `1rem`;
+        el3.style.margin = `1rem`;
+        el4.style.margin = `1rem`;
+        function rota() {
+            el1.style.transform = `rotate(45deg)`;
+            console.log('babab')
+
+        }
+        function scal() {
+            el2.style.transform = `scale(2)`;
+
+        }
+        function tran() {
+            el3.style.transform = `translate(10px, 2px)`;
+            
+        }
+        function skew() {
+            el4.style.transform = `skew(20deg, 10deg)`;
+            
+        }
+    </script>
+</body>
