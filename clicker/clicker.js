@@ -1,3 +1,7 @@
+let alert = document.getElementById("alert");
+let nickJSON = localStorage.getItem("userdata");
+let nick = JSON.parse(nickJSON);
+document.getElementById("nickname").innerHTML = nick[1];
 let clicks = 0;
 let totalClicks = 0;
 let coins = 0; 
@@ -49,7 +53,11 @@ if (coins == price || coins > price) {
     power *= 2;
     displayUpdate();
 } else {
-    alert('you not enogh coins')
+    alert.innerHTML = nick[1] + ', you not enogh coins';
+    alert.style.display = "block";
+    setTimeout(function() {
+        alert.style.display = "none";
+    }, 2000);
 }
 }
 function change() {
@@ -58,6 +66,11 @@ function change() {
         coins++;
         displayUpdate();
     } else {
-        alert('you not enogh clicks');
+        alert.innerHTML = nick[1] + ', you not enogh clicks';
+        alert.style.display = "block";
+        setTimeout(function() {
+            alert.style.display = "none";
+        }, 2000);
+            
     }
 }

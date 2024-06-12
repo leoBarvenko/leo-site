@@ -48,8 +48,21 @@ color: aliceblue;
 }
 #change {
     position: fixed;
-    right: 46%;
+    right: 48%;
     top: 11%;
     background-color: aquamarine;
     border-radius: 10px;
+}
+#alert {
+position: fixed;
+right: 50%;
+z-index: 1;
+background-color: crimson;
+border: 3px solid black;
+border-radius: 3px;
+}
+#nickname {
+    position: fixed;
+    right: 1%;
+    color: aqua;
 }
