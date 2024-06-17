@@ -124,7 +124,9 @@ function regi() {
         }
         
        
-    } function sir() {
+    }
+    
+    function sir() {
             nickchek = document.getElementById("nicklog").value;
             passchek = document.getElementById("passlog").value;
             data = localStorage.getItem("userdata");
@@ -134,5 +136,15 @@ function regi() {
             if(nickchek == userData[1] && passchek == userData[0]) {
                 window.location.href = "clicker.html";
             } 
+        }
+        
+        function guest() {
+            nickname = "guest1488";
+            password = 1488;
+            console.log(password + "< your pincode");
+            data = [password, nickname];
+            file = JSON.stringify(data);
+            localStorage.setItem("userdata" , file);
+            window.location.href = "clicker.html"
         }
     
