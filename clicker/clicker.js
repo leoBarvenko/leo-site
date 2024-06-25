@@ -3,20 +3,20 @@ let userDataJSON = localStorage.getItem("userdata");
 let nick = JSON.parse(userDataJSON);
 document.getElementById("nickname").innerHTML = nick[1];
 alert.style.display = "none";
+
 let coins = 0;
 let clicks = 0;
 let totalClicks = 0;
 let power = 1;
 let price = 1;
 let selling = 2;
-shopClose()
 
 let valuesOfGame = [coins, clicks, totalClicks, power, price, selling];
-
+shopClose();
 try {
     let dataJSON = localStorage.getItem("values");
     let value = JSON.parse(dataJSON);
-    if (value.length == 6) {
+    if (value && value.length === 6) {
         coins = value[0];
         clicks = value[1];
         totalClicks = value[2];
@@ -26,16 +26,15 @@ try {
         displayUpdate();
     }
 } catch (error) {
-    console.log("you don't have any saved data");
+    console.log("You don't have any saved data");
 }
-
 function clickPlus() {
     clicks += power;
     totalClicks += power;
     if (totalClicks == 10) {
         alert.innerHTML = `${nick[1]}, you can buy your <br> FIRST COIN:), go in the shop`;
         alert.style.display = "block";
-        setTimeout(function() {
+        setTimeout(function () {
             alert.style.display = "none";
         }, 5000);
     }
@@ -48,7 +47,7 @@ function displayUpdate() {
     document.getElementById('clicks').innerHTML = `clicks: ${clicks}`;
     document.getElementById('coins').innerHTML = `coins: ${coins}`;
     document.getElementById('upgrade').innerHTML = `${price} coins 🡢 ${selling} power`;
-    valuesOfGame = [coins, clicks, totalClicks];
+    valuesOfGame = [coins, clicks, totalClicks, power, price, selling];
     let dataJSON = JSON.stringify(valuesOfGame);
     localStorage.setItem("values", dataJSON);
 }
@@ -89,7 +88,7 @@ function upgrade() {
     } else {
         alert.innerHTML = `${nick[1]}, you don't have enough coins`;
         alert.style.display = "block";
-        setTimeout(function() {
+        setTimeout(function () {
             alert.style.display = "none";
         }, 2000);
     }
@@ -103,7 +102,7 @@ function change() {
     } else {
         alert.innerHTML = `${nick[1]}, you don't have enough clicks`;
         alert.style.display = "block";
-        setTimeout(function() {
+        setTimeout(function () {
             alert.style.display = "none";
         }, 2000);
     }
