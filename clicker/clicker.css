@@ -66,3 +66,13 @@ border-radius: 3px;
     right: 1%;
     color: aqua;
 }
+#minigame {
+    position: fixed;
+    right: 1%;
+    top: 95%;
+    background-color: red;
+    border-radius: 2px;
+}
+body{
+    background-color: black;
+}

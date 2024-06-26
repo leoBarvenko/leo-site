@@ -3,6 +3,7 @@ let userDataJSON = localStorage.getItem("userdata");
 let nick = JSON.parse(userDataJSON);
 document.getElementById("nickname").innerHTML = nick[1];
 alert.style.display = "none";
+let timer = false;
 
 let coins = 0;
 let clicks = 0;
@@ -66,7 +67,7 @@ function shopOpening() {
 }
 
 function shopClose() {
-    document.body.style.backgroundColor = "white";
+    document.body.style.backgroundColor = "black";
     let shop = document.getElementsByClassName("shop");
     let notShop = document.getElementsByClassName("notShopCharacter");
 
@@ -107,3 +108,24 @@ function change() {
         }, 2000);
     }
 }
+
+if(totalClicks == 100 || totalClicks > 100) {
+    setTimeout(timerwatch()
+, 90000)
+}
+
+function timerwatch() {
+    timer = true;
+}
+
+function minigame() {
+    if(timer) {
+        timer = false;
+        alert.innerHTML = `sorry but i will make this in next update, see you in next update!`;
+        alert.style.display = "block";
+        setTimeout(function () {
+            alert.style.display = "none";
+        }, 3000);
+        //window.location.href = "minigame.html";
+    }
+    }
