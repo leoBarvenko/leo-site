@@ -1,0 +1,11 @@
+#start {
+    position: fixed;
+    background-color: chartreuse;
+    width: 25vw;
+    height: 15vh;
+    left: 35%;
+    top:50%;
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
