@@ -111,7 +111,7 @@ function change() {
 
 if(totalClicks == 100 || totalClicks > 100) {
     setTimeout(timerwatch()
-, 90000)
+, 1000)
 }
 
 function timerwatch() {
@@ -119,13 +119,13 @@ function timerwatch() {
 }
 
 function minigame() {
-    if(timer) {
+    //if(timer) {
         timer = false;
         alert.innerHTML = `sorry but i will make this in next update, see you in next update!`;
         alert.style.display = "block";
         setTimeout(function () {
             alert.style.display = "none";
         }, 3000);
-        //window.location.href = "minigame.html";
-    }
+        window.location.href = "minigame.html";
+    //}
     }
