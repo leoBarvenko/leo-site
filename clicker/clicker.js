@@ -120,8 +120,6 @@ function timerwatch() {
 
 function minigame() {
     //if(timer) {
-        timer = false;
-        alert.innerHTML = `sorry but i will make this in next update, see you in next update!`;
         alert.style.display = "block";
         setTimeout(function () {
             alert.style.display = "none";

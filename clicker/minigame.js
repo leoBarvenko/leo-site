@@ -2,21 +2,18 @@ let start = document.getElementById("start");
 let go = document.getElementById("go");
 let btn = document.getElementById("btn");
 let clicker = document.getElementById("clicker");
-let leagues = document.getElementById("league");
+let tim = document.getElementById("time")
 let clicks = 0;
 let starting = false;
 start.style.display = "block";
 go.style.display = "none";
 btn.style.display = "none";
 clicker.style.display = "none";
-leagues.style.display = "none";
 function startTheGame() {
     start.style.display = "none";
     go.style.display = "block";
     btn.style.display = "block";
     clicker.style.display = "none";
-    leagues.style.display = "none";
-
 }
 
 function going() {
@@ -24,13 +21,13 @@ function going() {
     starting = true;
     setTimeout(() => {
         stop()
-    }, 10000);
-    for(let i = 0; i < 11; i++) {
-
-    }
+    }, 10000)
+    setInterval(time(), 1000)
 }
 
-
+function time() {
+    tim.innerHTML = "seconds left" + time;
+}
 
 function clickplus() {
     if(starting == true) {
@@ -50,9 +47,13 @@ function goInClicker() {
     let valuesJSON = localStorage.getItem("values");
     
     let values = JSON.parse(valuesJSON);
-    values[1] + clicks;
-    console.log(values)
+    console.log(values);
+    values[1] += clicks;
+    console.log(values);
+    if(values[2] < values[1]) {
+        values[2] = values[1]
+    }
     valuesJSON = JSON.stringify(values);
     valuesJSON = localStorage.setItem("values", valuesJSON);
-    //window.location.href = "clicker.html";
+    window.location.href = "clicker.html";
 }
