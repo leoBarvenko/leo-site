@@ -3,12 +3,14 @@ let go = document.getElementById("go");
 let btn = document.getElementById("btn");
 let clicker = document.getElementById("clicker");
 let tim = document.getElementById("time")
+let time = 10;
 let clicks = 0;
 let starting = false;
 start.style.display = "block";
 go.style.display = "none";
 btn.style.display = "none";
 clicker.style.display = "none";
+
 function startTheGame() {
     start.style.display = "none";
     go.style.display = "block";
@@ -18,15 +20,18 @@ function startTheGame() {
 
 function going() {
     go.style.display = "none";
-    starting = true;
+    starting = true; 
     setTimeout(() => {
         stop()
     }, 10000)
-    setInterval(time(), 1000)
+    setInterval(() => {
+        timer()
+    }, 100)
 }
 
-function time() {
-    tim.innerHTML = "seconds left" + time;
+function timer() {
+    tim-= 1; 
+    tim.innerHTML = "seconds left " + time;
 }
 
 function clickplus() {
@@ -38,8 +43,8 @@ function clickplus() {
 
 function stop() {
     btn.style.display = "none";
+    tim.innerHTML = "";
     clicker.style.display = "block";
-    leagues.style.display = "block";
     clicks = clicks * 2;
 }
 
