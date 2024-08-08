@@ -21,17 +21,22 @@ function startTheGame() {
 function going() {
     go.style.display = "none";
     starting = true; 
+    tim.innerHTML = "seconds left " + time;
+    btn.innerHTML = "click here(NOW!!!)";
     setTimeout(() => {
         stop()
-    }, 10000)
+    }, 10500)
     setInterval(() => {
         timer()
-    }, 100)
+    }, 1000)
 }
 
 function timer() {
-    tim-= 1; 
-    tim.innerHTML = "seconds left " + time;
+    if(starting) {
+        
+        time = time - 1; 
+        document.getElementById("time").innerHTML = "seconds left " + time;
+    }
 }
 
 function clickplus() {
@@ -42,6 +47,7 @@ function clickplus() {
 }
 
 function stop() {
+    starting = false;
     btn.style.display = "none";
     tim.innerHTML = "";
     clicker.style.display = "block";

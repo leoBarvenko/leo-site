@@ -119,11 +119,11 @@ function timerwatch() {
 }
 
 function minigame() {
-    //if(timer) {
+    if(timer) {
         alert.style.display = "block";
         setTimeout(function () {
             alert.style.display = "none";
         }, 3000);
-        window.location.href = "minigame.html";
-    //}
+        //window.location.href = "minigame.html";
+    }
     }
